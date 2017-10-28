@@ -24,9 +24,10 @@ public class SimpleCalcTest {
 		
 	}
 	
-	@Test (expected = RuntimeException.class)
-	public void whenMoreThanTwoInputThenThrowException(){
+	@Test
+	public void whenMoreThanTwoInputThenReturnValidResult(){
 		int value = calc.add("1,2,3");
+		Assert.assertEquals(1+2+3, value);
 	}
 	
 	@Test
