@@ -28,5 +28,13 @@ public class SimpleCalcTest {
 	public void whenMoreThanTwoInputThenThrowException(){
 		int value = calc.add("1,2,3");
 	}
+	
+	@Test
+	public void whenValidInputThenCheckForResult(){
+		int value = calc.add("1,2");
+		
+		Assert.assertEquals(1+2, value);
+		
+	}
 
 }
