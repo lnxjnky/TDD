@@ -37,5 +37,29 @@ public class SimpleCalcTest {
 		Assert.assertEquals(1+2, value);
 		
 	}
+	
+	@Test
+	public void whenValidInputWithThreeParamsThenCheckForResult(){
+		int value = calc.add("1,2,3");
+		
+		Assert.assertEquals(1+2+3, value);
+		
+	}
+	
+	@Test
+	public void whenValidInputWithOneParamThenCheckForResult(){
+		int value = calc.add("1");
+		
+		Assert.assertEquals(1, value);
+		
+	}
+	
+	@Test
+	public void whenValidInputWithZeroParamsThenCheckForResult(){
+		int value = calc.add("");
+		
+		Assert.assertEquals(0, value);
+		
+	}
 
 }
