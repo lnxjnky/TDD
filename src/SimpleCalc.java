@@ -1,5 +1,6 @@
 public class SimpleCalc {
 	public int add(String inputString) {
+		int returnVal =0;
 		String[] numbersArray = inputString.split(",");
 		if(numbersArray.length > 2)
 		{
@@ -7,11 +8,16 @@ public class SimpleCalc {
 		}
 		for(String number: numbersArray)
 		{
-			if(Integer.parseInt(number) < 0)
+			int currentNum = Integer.parseInt(number);
+			if(currentNum < 0)
 			{
 				throw new RuntimeException("Negative not allowed");
 			}
+			else
+			{
+				returnVal += currentNum;
+			}
 		}
-		return 0;
+		return returnVal;
 	}
 }
