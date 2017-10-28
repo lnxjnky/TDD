@@ -23,5 +23,10 @@ public class SimpleCalcTest {
 		int value = calc.add("-1,1");
 		
 	}
+	
+	@Test (expected = RuntimeException.class)
+	public void whenMoreThanTwoInputThenThrowException(){
+		int value = calc.add("1,2,3");
+	}
 
 }
