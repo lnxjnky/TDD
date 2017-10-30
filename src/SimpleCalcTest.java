@@ -61,5 +61,10 @@ public class SimpleCalcTest {
 		Assert.assertEquals(0, value);
 		
 	}
+	
+	@Test
+	public final void whenNewLineIsUsedBetweenNumbersThenReturnValuesAreTheirSums() {
+	    Assert.assertEquals(3+6+15, calc.add("3,6\n15"));
+	}
 
 }
