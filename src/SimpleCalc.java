@@ -1,7 +1,7 @@
 public class SimpleCalc {
 	public int add(String inputString) {
 		int returnVal =0;
-		String[] numbersArray = inputString.split(",");
+		String[] numbersArray = inputString.split(",|\n");
 
 		for(String number: numbersArray)
 		{
